@@ -25,7 +25,7 @@ import org.springframework.samples.petclinic.vets.system.VetsProperties;
  * @author Maciej Szarlinski
  */
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"org.springframework.samples.petclinic"})
 @EnableConfigurationProperties(VetsProperties.class)
 public class VetsServiceApplication {
 

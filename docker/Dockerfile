@@ -24,6 +24,13 @@ EXPOSE ${EXPOSED_PORT}
 
 ENV SPRING_PROFILES_ACTIVE docker
 
+# Configuring New Relic API key and endpoints
+ARG NR_INSERT_API_KEY
+ENV NR_INSERT_API_KEY=${NR_INSERT_API_KEY}
+
+ARG NR_METRIC_URI
+ENV NR_METRIC_URI=${NR_METRIC_URI}
+
 COPY --from=builder application/dependencies/ ./
 COPY --from=builder application/spring-boot-loader/ ./
 COPY --from=builder application/snapshot-dependencies/ ./

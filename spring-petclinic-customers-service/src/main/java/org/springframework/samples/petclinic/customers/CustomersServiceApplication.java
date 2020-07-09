@@ -23,7 +23,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author Maciej Szarlinski
  */
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"org.springframework.samples.petclinic"})
 public class CustomersServiceApplication {
 
 	public static void main(String[] args) {

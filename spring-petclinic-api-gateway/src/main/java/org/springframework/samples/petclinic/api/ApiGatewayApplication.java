@@ -43,7 +43,7 @@ import java.time.Duration;
  * @author Maciej Szarlinski
  */
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"org.springframework.samples.petclinic"})
 public class ApiGatewayApplication {
 
     public static void main(String[] args) {

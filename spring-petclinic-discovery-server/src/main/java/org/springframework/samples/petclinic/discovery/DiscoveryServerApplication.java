@@ -23,7 +23,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @author Maciej Szarlinski
  */
 @EnableEurekaServer
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"org.springframework.samples.petclinic"})
 public class DiscoveryServerApplication {
 
 	public static void main(String[] args) {
